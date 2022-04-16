@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Testing Mobile App" parallel="tests" thread-count="1">
+    <test name="LoginPage">
+        <packages>
+            <package name="ru.gb.tests.login"/>
+        </packages>
+    </test>
+    <test name="MainPage">
+        <packages>
+            <package name="ru.gb.tests.main"/>
+        </packages>
+    </test>
+    <test name="FormsPage">
+        <packages>
+            <package name="ru.gb.tests.forms"/>
+        </packages>
+    </test>
+</suite>
