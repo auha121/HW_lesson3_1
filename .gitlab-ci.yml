@@ -13,3 +13,4 @@ test_tun_job:
     when: always
     paths:
       - allure-results
+
