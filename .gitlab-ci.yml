@@ -8,7 +8,7 @@ test_tun_job:
   only:
     - lesson_8
   script:
-    - mvn clean test -DsuiteXmlFile=testNG.xml
+    - C:\Program Files\apache-maven-3.8.4\bin\mvn clean test -DsuiteXmlFile=testNG.xml
   artifacts:
     when: always
     paths:
