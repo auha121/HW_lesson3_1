@@ -1,4 +1,5 @@
 stages:
+  - fail
   - secret
   - precondition
   - test
@@ -32,4 +33,15 @@ python_job:
   only:
     - lesson_8_ignore
   script:
-    - python "test.py"
+    - python test.py $MY_SECRET
+  when: manual
+
+fail_job:
+  stage: fail
+  tags:
+    - gb-runner
+  only:
+    - lesson_8_ignore
+  script:
+    - python fail.py
+  allow_failure: true

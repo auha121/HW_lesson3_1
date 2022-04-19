@@ -1,1 +1,3 @@
-print("Hello Python")
+import sys
+
+print(sys.argv[1])
