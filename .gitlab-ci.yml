@@ -22,4 +22,4 @@ python_job:
   only:
     - lesson_8_ignore
   script:
-    - python test.py
+    - python "test.py"
