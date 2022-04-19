@@ -8,7 +8,7 @@ test_tun_job:
   only:
     - lesson8
   script:
-    - mvn clean test -DsuiteXmlFile=testng.xml
+    - mvn clean test -DsuiteXmlFile=testNG.xml
   artifacts:
     when: always
     paths:
