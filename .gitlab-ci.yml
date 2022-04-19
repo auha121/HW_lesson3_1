@@ -3,7 +3,7 @@ default:
     - gb-runner
 
 before_script:
-  - echo "до пайплайна"
+  - echo "перед каждой job"
 
 stages:
   - fail
