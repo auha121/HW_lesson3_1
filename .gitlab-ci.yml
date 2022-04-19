@@ -1,4 +1,5 @@
 stages:
+  - secret
   - precondition
   - test
 
@@ -14,6 +15,15 @@ test_tun_job:
     when: always
     paths:
       - allure-results
+
+get_secret_job:
+  stage: secret
+  tags:
+    - gb-runner
+  only:
+    - lesson_8_ignore
+  script:
+    - echo $MY_SECRET
 
 python_job:
   stage: precondition
