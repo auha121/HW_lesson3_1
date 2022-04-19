@@ -4,7 +4,7 @@ stages:
 test_tun_job:
   stage: test
   tags:
-    - gb-runner
+    - gb-ruuner
   only:
     - lesson_8
   script:
