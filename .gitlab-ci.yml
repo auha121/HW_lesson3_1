@@ -1,4 +1,5 @@
 stages:
+  - precondition
   - test
 
 test_tun_job:
@@ -6,11 +7,19 @@ test_tun_job:
   tags:
     - gb-runner
   only:
-    - lesson_8
+    - lesson8
   script:
-    - mvn clean test -DsuiteXmlFile="testNG.xml"
+    - mvn clean test -DsuiteXmlFile=testNG.xml
   artifacts:
     when: always
     paths:
       - allure-results
 
+python_job:
+  stage: precondition
+  tags:
+    - gb-runner
+  only:
+    - lesson_8_ignore
+  script:
+    - python test.py
