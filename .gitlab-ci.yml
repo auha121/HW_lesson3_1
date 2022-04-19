@@ -1,3 +1,10 @@
+default:
+  tags:
+    - gb-runner
+
+before_script:
+  - echo "до пайплайна"
+
 stages:
   - fail
   - secret
@@ -6,8 +13,6 @@ stages:
 
 test_tun_job:
   stage: test
-  tags:
-    - gb-runner
   only:
     - lesson_8
   script:
@@ -19,8 +24,6 @@ test_tun_job:
 
 get_secret_job:
   stage: secret
-  tags:
-    - gb-runner
   only:
     - lesson_8_ignore
   script:
@@ -28,8 +31,6 @@ get_secret_job:
 
 python_job:
   stage: precondition
-  tags:
-    - gb-runner
   only:
     - lesson_8_ignore
   script:
@@ -38,8 +39,6 @@ python_job:
 
 fail_job:
   stage: fail
-  tags:
-    - gb-runner
   only:
     - lesson_8_ignore
   script:
