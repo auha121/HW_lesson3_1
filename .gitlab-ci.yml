@@ -7,9 +7,9 @@ test_tun_job:
   tags:
     - gb-runner
   only:
-    - lesson8
+    - lesson_8
   script:
-    - mvn clean test -DsuiteXmlFile=testNG.xml
+    - mvn clean test -DsuiteXmlFile="testNG.xml"
   artifacts:
     when: always
     paths:
