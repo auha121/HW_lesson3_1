@@ -34,7 +34,7 @@ python_job:
   only:
     - lesson_8_ignore
   script:
-    - python test.py $MY_SECRET
+    - python3 test.py $MY_SECRET
   when: manual
 
 fail_job:
@@ -42,5 +42,5 @@ fail_job:
   only:
     - lesson_8_ignore
   script:
-    - python fail.py
+    - python3 fail.py
   allow_failure: true
